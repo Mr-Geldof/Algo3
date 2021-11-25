@@ -1,0 +1,34 @@
+ALGORITHM Produit_Scalaire
+VAR
+    verteur1,vecteur2: ARRAY_OF INTEGER[1..100];
+    n,j,m: INTEGER;
+BEGIN
+    PROCEDURE dot_product(verteur1,vecteur2);
+    VAR
+        Prdt_Sclaire: INTEGER :=0;
+        i : INTEGER;
+        Write("Entrez le nombre de couple");
+        Read(m);
+        FOR j FROM m-1 STEP 1 DO
+            Write("Entrez le couple vecteur");
+            Read(vecteur1(j), vecteur2(j));
+    FOR i FROM 0 TO n-1 STEP 1 DO
+        Write("Entrez l'élement" ,i, "du vecteur1");
+        Read(vecteur1[i]);
+        Write("Entrez l'élement" ,i, "du vecteur2");
+        Read(vecteur2[i]);
+        END_FOR
+    END_FOR
+    BEGIN
+    FOR i FROM 0 TO 2 STEP 1 DO
+        Prdt_Sclaire+= vecteur1(i) * vecteur2(i);
+    END_FOR
+    //Resolution
+    Produit_Scalaire(vecteur1(i), vecteur2(i))
+    IF (Prdt_Scalaire == 0) THEN
+        Write("Vecteur1 et Vecteur2 sont othgonaux")
+    ELSE
+        Write("Vecteur1 et Vecteur2 sont pas othgonaux")
+    END_IF
+    END_PROCEDURE     
+END
